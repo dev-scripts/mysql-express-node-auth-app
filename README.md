@@ -1,3 +1,9 @@
+This is a full-fledged User Authentication app created using Express, TypeORM, Passport, Swagger, MySQL, and Node. This app will give you an overall concept of how authentication works.
+
+Here is the list of APIs this app contains:"
+
+ <img src="images/docs.png">
+
 # Project Setup and Local Run Guide
 
 This guide provides step-by-step guide on setting up and running the "mysql-expense-node-auth-app" project locally on your machine. Please follow the steps outlined below.
