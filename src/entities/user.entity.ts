@@ -2,7 +2,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 import { UserI } from "./user.interface";
 
-@Entity("users_1")
+@Entity("users")
 export class User implements UserI {
   @PrimaryGeneratedColumn("increment")
   id: number;
