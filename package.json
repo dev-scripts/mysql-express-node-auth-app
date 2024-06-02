@@ -1,5 +1,5 @@
 {
-  "name": "mysql-expense-node-auth-app",
+  "name": "mysql-express-node-auth-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

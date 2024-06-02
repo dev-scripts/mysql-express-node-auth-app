@@ -6,7 +6,7 @@ Here is the list of APIs this app contains:"
 
 # Project Setup and Local Run Guide
 
-This guide provides step-by-step guide on setting up and running the "mysql-expense-node-auth-app" project locally on your machine. Please follow the steps outlined below.
+This guide provides step-by-step guide on setting up and running the "mysql-express-node-auth-app" project locally on your machine. Please follow the steps outlined below.
 
 Below is a summary of key features and instructions for running the project:
 
@@ -42,14 +42,14 @@ Before getting started, ensure that you have the following installed on your mac
    Open a terminal and run the following command to clone the project repository:
 
    ```bash
-   git clone https://github.com/dev-scripts/mysql-expense-node-auth-app.git
+   git clone https://github.com/dev-scripts/mysql-express-node-auth-app.git
    ```
 
 2. **Navigate to the Project Directory:**
    Change into the project directory using the following command:
 
    ```bash
-   cd mysql-expense-node-auth-app
+   cd mysql-express-node-auth-app
    ```
 
 3. **Install Dependencies:**
@@ -123,13 +123,13 @@ The project includes commands for managing database migrations using TypeORM.
   Create a `.env` file in the project root with the necessary environment variables. You can refer to the provided `.env.example` file for guidance.
 
 - **Swagger UI:**
-  Access the Swagger UI at `http://localhost:3000/docs` to interact with the API documentation.
+  Access the Swagger UI at `http://localhost:8000/docs` to interact with the API documentation.
 
 - **Concurrent Commands:**
   The `concurrently` package allows you to run multiple npm scripts concurrently. This is utilized in the `npm run dev` command.
 
 ---
 
-Now you should have the "mysql-expense-node-auth-app" project up and running locally. If you encounter any issues, please refer to the project documentation or seek assistance from the project's maintainers.
+Now you should have the "mysql-express-node-auth-app" project up and running locally. If you encounter any issues, please refer to the project documentation or seek assistance from the project's maintainers.
 
 Feel free to customize the content as needed for your specific project.
