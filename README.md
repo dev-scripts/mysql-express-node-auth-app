@@ -2,7 +2,7 @@ This is a full-fledged User Authentication app created using Express, TypeORM, P
 
 Here is the list of APIs this app contains:"
 
- <img src="images/docs.png">
+ <img src="images/api-docs.png">
 
 # Project Setup and Local Run Guide
 
@@ -18,11 +18,12 @@ Below is a summary of key features and instructions for running the project:
 2. TypeORM for database interactions.
 3. Passport for authentication strategies.
 4. Swagger for API documentation.
+5. Docker desktop
 
 ### Development Tools:
 
 1. Nodemon for automatic server restart during development.
-2. ts-node for running TypeScript files directly.
+2. `ts-node` for running `TypeScript` files directly.
 3. Concurrently for running multiple npm scripts concurrently.
 4. Database Migrations:
 
@@ -35,6 +36,7 @@ Before getting started, ensure that you have the following installed on your mac
 
 - Node.js: [Download and Install Node.js](https://nodejs.org/)
 - npm (Node Package Manager): Included with Node.js installation
+- Docker Desktop
 
 ## Project Setup
 
@@ -52,59 +54,30 @@ Before getting started, ensure that you have the following installed on your mac
    cd mysql-express-node-auth-app
    ```
 
-3. **Install Dependencies:**
-   Install project dependencies by running:
-
-   ```bash
-   npm install
-   ```
-
 ## Running the Project Locally
 
-### Development Mode
-
-To run the project in development mode with automatic restart on file changes, execute the following command:
-
+ ### 1. Change the file permissions `run.sh` to make it executable
 ```bash
-npm run dev
+ chmod +x run.sh 
 ```
 
-This command uses `nodemon` to watch for changes in the `src` directory and automatically restarts the server.
-
-### Production Mode
-
-To start the project in production mode, use:
-
+ ### 2. copy the `.env.example` file and make new `.env` file 
 ```bash
-npm start
+ ./run.sh env
 ```
 
-### Swagger Documentation
-
-To generate Swagger documentation, use the following command:
-
+ ### 3. Start the project. Below command will pull the MySQL, Node images, install the dependencies. 
 ```bash
-npm run swagger
+ ./run.sh start
+```
+once docker containers are up and running project is accessable  `http://localhost:8000/docs`. This is the Swagger UI which will list all the API endpoints.
+
+ ### 4. Go inside app container. 
+```bash
+ ./run.sh bash
 ```
 
-This command generates Swagger specs based on your TypeScript code.
-
-## Database Migrations
-
-The project includes commands for managing database migrations using TypeORM.
-
-- **Create a Migration:**
-
-  ```bash
-  npm run migration:create
-  ```
-
-- **Generate a Migration:**
-
-  ```bash
-  npm run migration:generate
-  ```
-
+Once you are inside the docker container you can run the below commands. These commands are for managing database migrations using TypeORM.
 - **Run Migrations:**
 
   ```bash
@@ -116,19 +89,17 @@ The project includes commands for managing database migrations using TypeORM.
   ```bash
   npm run migration:down
   ```
+- **Create a Migration:**
 
-## Additional Notes
+  ```bash
+  npm run migration:create
+  ```
 
-- **Environment Variables:**
-  Create a `.env` file in the project root with the necessary environment variables. You can refer to the provided `.env.example` file for guidance.
+- **Generate a Migration:**
 
-- **Swagger UI:**
-  Access the Swagger UI at `http://localhost:8000/docs` to interact with the API documentation.
-
-- **Concurrent Commands:**
-  The `concurrently` package allows you to run multiple npm scripts concurrently. This is utilized in the `npm run dev` command.
-
----
+  ```bash
+  npm run migration:generate
+  ```
 
 Now you should have the "mysql-express-node-auth-app" project up and running locally. If you encounter any issues, please refer to the project documentation or seek assistance from the project's maintainers.
 
